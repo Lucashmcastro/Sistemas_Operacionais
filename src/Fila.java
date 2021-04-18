@@ -1,4 +1,3 @@
-
 public class Fila{
 	private int cont , entrada, saida;
 	private Object[] buffer;
@@ -40,7 +39,7 @@ public class Fila{
 		
 		--cont;
 		item = buffer[saida];
-		saida = (saida + 1) % capacidade; //pula o ponteira pra direita e caso a fila chegue no final do buffer ele volta a 0 
+		saida = (saida + 1) % capacidade; 
 		
 		notify();
 		
@@ -50,7 +49,7 @@ public class Fila{
 	
 	public boolean Verificar() {
 		if(cont == 0) {
-			return  true ;
+			return  true;
 		}
 		
 		return false;
