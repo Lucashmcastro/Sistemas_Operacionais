@@ -19,16 +19,16 @@ public class Funcionario extends Thread {
 		File arq = new File(dir, txt);
 	    
 	    try {
-	        FileReader fileReader = new FileReader(arq); //Indicamos o arquivo que ser� lido
-	        BufferedReader bufferedReader = new BufferedReader(fileReader); //Criamos o objeto bufferReader 	        
+	        FileReader fileReader = new FileReader(arq);//O arquivo que será lido
+	        BufferedReader bufferedReader = new BufferedReader(fileReader); //Criação o objeto bufferReader 	        
 	        String linha = " ";
 	        
-	        while ( ( linha = bufferedReader.readLine() ) != null) {  //Fazemos um loop linha a linha no arquivo,
+	        while ( ( linha = bufferedReader.readLine() ) != null) {//Loop linha a linha no arquivo. 
 	        	tarefas [cont] = linha;
 	        	++cont;	   
 	        }
 	        
-	        fileReader.close(); //liberamos o fluxo dos objetos ou fechamos o arquivo
+	        fileReader.close(); //Liberação o fluxo dos objetos ou fechamento do arquivo
 	        bufferedReader.close();
 	        
 	        } 
@@ -37,7 +37,7 @@ public class Funcionario extends Thread {
 	    }
 	}
 	
-	public void run() { // 
+	public void run() { 
 		for (int i = 0 ; i < cont; i++) {
 			fila.inserir(tarefas[i]);
 		}
